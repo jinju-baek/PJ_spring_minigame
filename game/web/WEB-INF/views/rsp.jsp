@@ -23,6 +23,6 @@
   <button id="rock" class="btn">바위</button>
   <button id="paper" class="btn">보</button>
 </div>
-<div id="score">00</div>
+<div id="score">0</div>
 </body>
 </html>
