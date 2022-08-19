@@ -35,7 +35,9 @@ const changeGame = (viewName) => { // 게임 클릭 시 화면 전환
     }
 
     $selGame.querySelector('#' + gameView).style.display = 'block';
-    if (gameView === 'concentration') {
+    if (gameView === 'tictactoe') {
+        tttStart();
+    } else if (gameView === 'concentration') {
         cctRestart();
     } else if (gameView === 'koongkoongtta') {
         kktRestart();

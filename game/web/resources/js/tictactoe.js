@@ -10,7 +10,7 @@
 const $table = document.querySelector('#tttTable');
 const $result = document.querySelector('#result');
 let turn = 'O';
-const arr = [];
+let arr = [];
 
 const hasWinner = (target) => {
     const rowIndex = target.parentNode.rowIndex;
@@ -180,17 +180,24 @@ const callBack = (event) => {
     setTimeout(checkComputerTurn(event.target), 1000);
 };
 
-for (let i = 0; i < 3; i++) {
-    const $tr = document.createElement('tr');
-    const cell = [];
-    for (let j = 0; j < 3; j++) {
-        const $td = document.createElement('td');
-        $tr.append($td);
-        cell.push($td);
+const tttStart = () => {
+    $table.textContent = '';
+    $result.textContent = '';
+    arr = [];
+
+    for (let i = 0; i < 3; i++) {
+        const $tr = document.createElement('tr');
+        const cell = [];
+        for (let j = 0; j < 3; j++) {
+            const $td = document.createElement('td');
+            $tr.append($td);
+            cell.push($td);
+        }
+        $table.append($tr);
+        arr.push(cell);
     }
-    $table.append($tr);
-    arr.push(cell);
+    $table.addEventListener('click', callBack);
 }
-$table.addEventListener('click', callBack);
+
 // $tttBox.append($table);
 // $tttBox.append($result);
