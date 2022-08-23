@@ -185,6 +185,7 @@ const tttStart = () => {
     $result.textContent = '';
     arr = [];
 
+
     for (let i = 0; i < 3; i++) {
         const $tr = document.createElement('tr');
         const cell = [];
