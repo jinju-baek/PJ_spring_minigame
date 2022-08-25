@@ -70,7 +70,6 @@
             <version>${org.slf4j-version}</version>
         </dependency>
 
-
         <!-- log4jdbc -->
         <!-- db 로깅 처리를 위해 추가 -->
         <dependency>

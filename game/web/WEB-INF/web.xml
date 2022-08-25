@@ -5,11 +5,11 @@
          metadata-complete="true"
          version="4.0">
 
-    <absolute-ordering />
-
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
+    <absolute-ordering />
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
