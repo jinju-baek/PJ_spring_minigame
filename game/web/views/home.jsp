@@ -53,14 +53,14 @@
         <li class="trpg">텍스트 RPG</li>
     </ul>
     <div id="selGame" class="sel-game">
-        <div id="tictactoe"><jsp:include page="/web/WEB-INF/views/tictactoe.jsp"></jsp:include></div>
-        <div id="concentration"><jsp:include page="/web/WEB-INF/views/concentration.jsp"></jsp:include></div>
-        <div id="koongkoongtta"><jsp:include page="/web/WEB-INF/views/koongkoongtta.jsp"></jsp:include></div>
-        <div id="mine-sweeper"><jsp:include page="/web/WEB-INF/views/mine-sweeper.jsp"></jsp:include></div>
-        <div id="number-baseball"><jsp:include page="/web/WEB-INF/views/number-baseball.jsp"></jsp:include></div>
-        <div id="response-check"><jsp:include page="/web/WEB-INF/views/response-check.jsp"></jsp:include></div>
-        <div id="rsp"><jsp:include page="/web/WEB-INF/views/rsp.jsp"></jsp:include></div>
-        <div id="text-rpg"><jsp:include page="/web/WEB-INF/views/text-rpg.jsp"></jsp:include></div>
+        <div id="tictactoe"><jsp:include page="/views/tictactoe.jsp"></jsp:include></div>
+        <div id="concentration"><jsp:include page="/views/concentration.jsp"></jsp:include></div>
+        <div id="koongkoongtta"><jsp:include page="/views/koongkoongtta.jsp"></jsp:include></div>
+        <div id="mine-sweeper"><jsp:include page="/views/mine-sweeper.jsp"></jsp:include></div>
+        <div id="number-baseball"><jsp:include page="/views/number-baseball.jsp"></jsp:include></div>
+        <div id="response-check"><jsp:include page="/views/response-check.jsp"></jsp:include></div>
+        <div id="rsp"><jsp:include page="/views/rsp.jsp"></jsp:include></div>
+        <div id="text-rpg"><jsp:include page="/views/text-rpg.jsp"></jsp:include></div>
     </div>
 </div>
 </body>

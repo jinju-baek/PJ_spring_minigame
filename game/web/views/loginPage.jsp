@@ -16,14 +16,16 @@
     </style>
 </head>
 <body>
-    <form method="post" action="/login">
+    <form action="/login" method="post">
         <span>id : </span>
-        <input type="text" name="" id="userEmail">
+        <input type="text" name="userId" id="userId">
         <br>
         <span>pw : </span>
-        <input type="password" name="" id="userPw">
+        <input type="password" name="userPw" id="userPw">
         <br>
-        <input class="login-btn" type="button" value="로그인">
+        <input type="submit" class="login-btn" value="로그인">
     </form>
 </body>
+<script>
+</script>
 </html>

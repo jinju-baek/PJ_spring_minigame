@@ -49,6 +49,28 @@
             <version>${org.springframework-version}</version>
         </dependency>
 
+        <!-- logback -->
+        <!-- slf4j를 사용하기 위해 추가(slf4j binding 방식) -->
+        <!-- logback-core와 slf4j-api를 자동으로 가져옴 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- slf4j -->
+        <!-- log4j를 사용하기 위해 추가(slf4j bridging module) -->
+        <!-- bridging module은 다른 로깅 API로의 Logger 호출을 slf4j 인터페이스로 연결하여 slf4j가 대신 처리 할 수 있도록 한다. 일종의 어댑터 역할을 하는 라이브러리 -->
+        <!-- 안써주면 slf4j 사용 시 충돌일어남 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+
+
         <!-- log4jdbc -->
         <!-- db 로깅 처리를 위해 추가 -->
         <dependency>
@@ -56,27 +78,18 @@
             <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
             <version>1.16</version>
         </dependency>
-        <dependency>
-            <groupId>org.lazyluke</groupId>
-            <artifactId>log4jdbc-remix</artifactId>
-            <version>0.2.7</version>
-        </dependency>
 
-        <!-- logback -->
-        <!-- logback-core가 없어도 알아서 구현해줄 수 있도록 추가 -->
-        <!--<dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.11</version>
-            <scope>test</scope>
-        </dependency>-->
-
-        <!-- slf4j -->
+        <!-- log4j -->
+        <!-- log4jdbc를 사용하기위해 추가 -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
+            <artifactId>log4j-api</artifactId>
             <version>${org.log4j-version}</version>
-            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${org.log4j-version}</version>
         </dependency>
 
 

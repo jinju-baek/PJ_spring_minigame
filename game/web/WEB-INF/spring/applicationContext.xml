@@ -5,17 +5,17 @@
     <!-- DataSource Configuration -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-        <property name="url" value="jdbc:log4jdbc:postgresql://localhost:5432/postgres?charSet=UTF-8" />
+        <property name="url" value="jdbc:log4jdbc:postgresql://localhost:5432/postgres" />
         <property name="username" value="postgres" />
         <property name="password" value="1234" />
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property ref="dataSource" name="dataSource" />
-        <property name="mapperLocations" value="classpath:sql/game-sql.xml" />
+        <property name="mapperLocations" value="classpath:mappers/**/*-mapper.xml" />
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
     </bean>
-    <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg ref="sqlSessionFactory" />
     </bean>
 </beans>
