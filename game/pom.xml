@@ -23,6 +23,38 @@
             <version>${org.springframework-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
         <!-- postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -40,34 +72,6 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>2.0.6</version>
-        </dependency>
-
-        <!-- spring-jdbc -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-
-        <!-- logback -->
-        <!-- slf4j를 사용하기 위해 추가(slf4j binding 방식) -->
-        <!-- logback-core와 slf4j-api를 자동으로 가져옴 -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-            <scope>test</scope>
-        </dependency>
-
-
-        <!-- slf4j -->
-        <!-- log4j를 사용하기 위해 추가(slf4j bridging module) -->
-        <!-- bridging module은 다른 로깅 API로의 Logger 호출을 slf4j 인터페이스로 연결하여 slf4j가 대신 처리 할 수 있도록 한다. 일종의 어댑터 역할을 하는 라이브러리 -->
-        <!-- 안써주면 slf4j 사용 시 충돌일어남 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-            <version>${org.slf4j-version}</version>
         </dependency>
 
         <!-- log4jdbc -->
@@ -89,6 +93,61 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${org.log4j-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.mail</groupId>
+                    <artifactId>mail</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.jms</groupId>
+                    <artifactId>jms</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jdmk</groupId>
+                    <artifactId>jmxtools</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.sun.jmx</groupId>
+                    <artifactId>jmxri</artifactId>
+                </exclusion>
+            </exclusions>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- logback -->
+        <!-- slf4j를 사용하기 위해 추가(slf4j binding 방식) -->
+        <!-- logback-core와 slf4j-api를 자동으로 가져옴 -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!-- slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+
+        <!-- slf4j -->
+        <!-- log4j를 사용하기 위해 추가(slf4j bridging module) -->
+        <!-- bridging module : 다른 로깅 API로의 Logger 호출을 slf4j 인터페이스로 연결하여 slf4j가 대신 처리 할 수 있도록 한다. 일종의 어댑터 역할을 하는 라이브러리 -->
+        <!-- 안써주면 slf4j 사용 시 충돌일어남 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${org.slf4j-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
         </dependency>
 
 

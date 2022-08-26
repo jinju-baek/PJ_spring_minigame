@@ -7,3 +7,4 @@
         <typeAlias type="com.proj.game.dto.UserDto" alias="UserDto"></typeAlias>
     </typeAliases>
 </configuration>
+
